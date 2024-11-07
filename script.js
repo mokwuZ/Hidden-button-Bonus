@@ -5,17 +5,17 @@ function generateButtons() {
     winNumber =  Math.floor(Math.random() * buttonsNumber)
     for (let i = 0; i < buttonsNumber; ++i) {
         document.getElementById('game').innerHTML += `
-        <button id="${i}" class="btn btn-primary" onclick="result(id)">${i + 1}</button>
+            <button id="${i}" class="btn btn-primary" onclick="gameOver(id)">${i + 1}</button>
         `
     }
 }
 
-function result(elementId) {
+function gameOver(elementId) {
     if (elementId == winNumber) {
         alert("Winner")
         window.location.reload();
     } else {
-        alert('Losser')
+        alert('Loser')
         window.location.reload();
     }
 }
